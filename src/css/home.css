@@ -1,0 +1,94 @@
+.hero-section-home {
+  height: 90vh;
+}
+
+.hero-section-home h5 {
+  line-height: 1.5em;
+}
+
+.stats .num {
+  font-size: 80px;
+  line-height: 1.2em;
+}
+
+.stats .text {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+}
+
+.breaker-text {
+  font-size: 25px;
+}
+
+.sub-heading,
+.hero-heading {
+  font-size: 50px;
+}
+
+#contact-us-section h4 {
+  font-size: 30px;
+}
+
+#contact-us-section input,
+textarea {
+  background-color: #f2f2f2 !important;
+}
+
+.testimonial-review-div{
+  height: 90px;
+}
+
+@media screen and (max-width: 1500px) {
+}
+
+@media screen and (max-width: 1400px) {
+  .hero-section-home {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (min-width: 600px) {
+  #stats-section {
+    background-color: #fdf6e6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home-page-main-section p {
+    text-align: center;
+  }
+  .services {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-heading {
+    font-size: 40px;
+  }
+  #hero-section h5 {
+    font-size: 1em;
+  }
+  .breaker-text {
+    font-size: 0.95em;
+  }
+  .stats .num {
+    font-size: 45px;
+  }
+  .sub-heading {
+    font-size: 23px;
+    text-align: center;
+  }
+  .stats .text {
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+  }
+  #contact-us-section h4 {
+    font-size: 23px;
+    text-align: center;
+  }
+  .testimonial-review-div{
+    height: 80px;
+  }
+}

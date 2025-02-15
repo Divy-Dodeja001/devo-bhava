@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Nelphim";
+  src: url("assets/fonts/nelphim/Nelphim-Regular-400.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/manrope/manrope.regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nelphim {
+  font-family: "Nelphim", sans-serif;
+}
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  font-size: 19px;
+}
+
+.primary-color {
+  color: #3e000d;
+}
+
+.secondary-color {
+  color: #fdf6e6;
+}
+
+.primary-bg {
+  background-color: #3e000d;
+}
+
+.secondary-bg {
+  background-color: #fdf6e6;
+}
+
+.line-primary {
+  background-color: #3e000d;
+  height: 4px;
+  width: 125px;
+}
+
+.line-grey {
+  background-color: #6f6d6d;
+  height: 1px;
+  width: 125px;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 0.95em;
+  }
+  .line-desktop, .line-grey {
+    width: 55px;
+  }
+}

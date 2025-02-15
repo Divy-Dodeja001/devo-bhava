@@ -1,0 +1,25 @@
+.nav-items {
+  gap: 3em;
+}
+
+.nav-item {
+  font-size: 0.9em;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.primary-button {
+  background-color: #3e000d;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 11px 20px;
+  border: none;
+}
+
+.primary-button:hover {
+  color: white;
+  background-color: black;
+}

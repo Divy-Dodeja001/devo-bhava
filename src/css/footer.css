@@ -1,0 +1,35 @@
+#footer-section {
+  background-image: url("/public/footervector.svg");
+  height: 300px;
+}
+
+#footer-section h3 {
+  font-size: 33px;
+}
+
+.border-line {
+  background-color: #6f6d6d;
+  opacity: 0.7;
+  height: 1.5px;
+  width: 80%;
+}
+
+.social-media-icons{
+    width: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  #footer-section h3 {
+    font-size: 25px;
+  }
+  #footer-section {
+    background-image: url("/public/footer-mobile-vector.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    background-position: center;
+  }
+  .social-media-icons{
+    width: 20px;
+}
+}
