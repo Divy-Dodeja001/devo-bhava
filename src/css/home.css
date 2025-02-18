@@ -34,8 +34,12 @@ textarea {
   background-color: #f2f2f2 !important;
 }
 
-.testimonial-review-div{
+.testimonial-review-div {
   height: 90px;
+}
+
+.navigation-arrow-div {
+  gap: 1.5em;
 }
 
 @media screen and (max-width: 1500px) {
@@ -78,6 +82,8 @@ textarea {
   }
   .sub-heading {
     font-size: 23px;
+  }
+  #about-us-section h3 {
     text-align: center;
   }
   .stats .text {
@@ -88,7 +94,13 @@ textarea {
     font-size: 23px;
     text-align: center;
   }
-  .testimonial-review-div{
+  .testimonial-review-div {
     height: 80px;
+  }
+  .navigation-arrow-div {
+    gap: 0.7em;
+  }
+  #gallery-home h5 {
+    font-size: 0.95em;
   }
 }

@@ -1,0 +1,68 @@
+@media screen and (min-width: 800px) {
+  #hero-section-service,
+  #breaker-section-service {
+    .hero-banner-text {
+      position: absolute;
+      color: white;
+      text-align: center;
+      top: 40%;
+    }
+    .hero-banner-text div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero-banner-text p {
+      width: 60%;
+      margin: auto;
+    }
+  }
+}
+
+.soiree-offering-key-points {
+  width: calc(50%);
+}
+
+.wedding-offerings {
+  gap: 2em;
+}
+
+.wedding-service-image {
+  width: 60px;
+}
+
+.wedding-offering {
+  width: calc(50% - 3em);
+}
+
+#private-events-section li {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .wedding-offerings {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .wedding-offering {
+    width: 100%;
+  }
+  .wedding-service-image {
+    width: 40px;
+  }
+  #wedding-services h5 {
+    font-size: 0.95em;
+  }
+  #wedding-services p {
+    font-size: 0.8em;
+  }
+  #private-events-section li {
+    font-size: 0.9em;
+  }
+  #private-events-section .key-points {
+    gap: 0.5em;
+  }
+  .soiree-offering-key-points {
+    width: fit-content;
+  }
+}

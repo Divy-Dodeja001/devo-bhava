@@ -1,5 +1,5 @@
-.our-story-image{
-    justify-content: end;
+.our-story-image {
+  justify-content: end;
 }
 
 @media screen and (min-width: 800px) {
@@ -15,16 +15,18 @@
       justify-content: center;
       flex-direction: column;
     }
-    .hero-banner-text p{
-        width: 60%;
-        margin: auto;
+    .hero-banner-text p {
+      width: 60%;
+      margin: auto;
     }
-    
+  }
+  #about-us-main-section h1 {
+    text-align: center;
   }
 }
 
-@media screen and (max-width:600px) {
-    .our-story-image{
-        justify-content: center;
-    }
+@media screen and (max-width: 600px) {
+  .our-story-image {
+    justify-content: center;
+  }
 }
