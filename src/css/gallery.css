@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  overflow-x: hidden !important;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 10px;

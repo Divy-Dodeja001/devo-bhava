@@ -15,7 +15,8 @@ import CountUp from "react-countup";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Gallery2 from "../components/Gallery2";
-import ContactForm from "../components/contactForm";
+import Button from "../components/Button";
+import axios from "axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,7 @@ const Home = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [query, setQuery] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
   const [counterState, setCounterState] = useState(false);
   const triggerCounterRef = useRef(null);
   const triggerRef = useRef(null);
@@ -46,6 +48,34 @@ const Home = () => {
       }
     };
   }, []);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    setIsSubmit(true);
+    e.preventDefault();
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/enquiry/send-enquiry",
+        { firstName, lastName, phoneNumber, email, message: query }
+      );
+      if (res) {
+        setSubmitMessage(res.data.message);
+        setFirstName("");
+        setLastName("");
+        setPhoneNumber("");
+        setEmail("");
+        setQuery("");
+        setIsSubmit(false);
+      }
+    } catch (error) {
+      setIsSubmit(false);
+      setSubmitMessage(
+        "Error sending enquiry. Please try again.",
+        error.message
+      );
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -64,7 +94,7 @@ const Home = () => {
                     Crafting bespoke events that combine elegance,
                     sophistication, and meticulous planning.
                   </h5>
-                  <ContactForm
+                  <Button
                     title={"Enquire now"}
                     className={"cta-btn"}
                     icon={"si:arrow-right-duotone"}
@@ -72,10 +102,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-12 col-md-6 pb-lg-5 d-flex justify-content-center align-items-center">
-                <img
-                  src="/public/heroImage.jpg"
-                  className="img-fluid rounded-2"
-                ></img>
+                <img src="/heroImage.jpg" className="img-fluid rounded-2"></img>
               </div>
             </div>
           </div>
@@ -83,17 +110,14 @@ const Home = () => {
             className="position-absolute"
             style={{ top: "0%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/hero-home-top-vector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/hero-home-top-vector.svg" className="img-fluid"></img>
           </div>
           <div
             className="position-absolute d-none d-md-block"
             style={{ bottom: "-30%", left: "0%", zIndex: -1 }}
           >
             <img
-              src="/public/hero-home-bottom-vector.svg"
+              src="/hero-home-bottom-vector.svg"
               className="img-fluid w-75"
             ></img>
           </div>
@@ -184,14 +208,14 @@ const Home = () => {
               <picture>
                 <source
                   media="(max-width:650px)"
-                  srcSet="/public/mobile/aboutUs-section-mobile.jpg"
+                  srcSet="/mobile/aboutUs-section-mobile.jpg"
                 />
                 <source
                   media="(min-width:651px)"
-                  srcSet="/public/aboutUs-section.jpg"
+                  srcSet="/aboutUs-section.jpg"
                 />
                 <img
-                  src="/public/aboutUs-section.jpg"
+                  src="/aboutUs-section.jpg"
                   className="img-fluid rounded-2"
                   alt=""
                   srcSet=""
@@ -214,14 +238,11 @@ const Home = () => {
               <picture>
                 <source
                   media="(max-width:650px)"
-                  srcSet="/public/mobile/planning-mobile.jpg"
+                  srcSet="/mobile/planning-mobile.jpg"
                 />
-                <source
-                  media="(min-width:651px)"
-                  srcSet="/public/planning.jpg"
-                />
+                <source media="(min-width:651px)" srcSet="/planning.jpg" />
                 <img
-                  src="/public/planning.jpg"
+                  src="/planning.jpg"
                   className="w-100 mb-2 mb-lg-4"
                   alt=""
                   srcSet=""
@@ -233,11 +254,11 @@ const Home = () => {
               <picture>
                 <source
                   media="(max-width:650px)"
-                  srcSet="/public/mobile/decor-mobile.jpg"
+                  srcSet="/mobile/decor-mobile.jpg"
                 />
-                <source media="(min-width:651px)" srcSet="/public/decor.jpg" />
+                <source media="(min-width:651px)" srcSet="/decor.jpg" />
                 <img
-                  src="/public/decor.jpg"
+                  src="/decor.jpg"
                   className="w-100 mb-2 mb-lg-4"
                   alt=""
                   srcSet=""
@@ -249,11 +270,11 @@ const Home = () => {
               <picture>
                 <source
                   media="(max-width:650px)"
-                  srcSet="/public/mobile/venue-mobile.jpg"
+                  srcSet="/mobile/venue-mobile.jpg"
                 />
-                <source media="(min-width:651px)" srcSet="/public/venue.jpg" />
+                <source media="(min-width:651px)" srcSet="/venue.jpg" />
                 <img
-                  src="/public/venue.jpg"
+                  src="/venue.jpg"
                   className="w-100 mb-2 mb-lg-4"
                   alt=""
                   srcSet=""
@@ -265,14 +286,11 @@ const Home = () => {
               <picture>
                 <source
                   media="(max-width:650px)"
-                  srcSet="/public/mobile/corporate-mobile.jpg"
+                  srcSet="/mobile/corporate-mobile.jpg"
                 />
-                <source
-                  media="(min-width:651px)"
-                  srcSet="/public/corporate.jpg"
-                />
+                <source media="(min-width:651px)" srcSet="/corporate.jpg" />
                 <img
-                  src="/public/corporate.jpg"
+                  src="/corporate.jpg"
                   className="w-100 mb-2 mb-lg-4"
                   alt=""
                   srcSet=""
@@ -295,7 +313,7 @@ const Home = () => {
             detail reflects perfection.
           </p>
           <div className="d-flex justify-content-center">
-            <ContactForm
+            <Button
               title={"Enquire now"}
               className={"cta-btn"}
               icon={"si:arrow-right-duotone"}
@@ -308,16 +326,13 @@ const Home = () => {
             className="position-absolute"
             style={{ top: "-30%", left: "0%", zIndex: -1 }}
           >
-            <img src="/public/small-leftVector.svg" className="img-fluid"></img>
+            <img src="/small-leftVector.svg" className="img-fluid"></img>
           </div>
           <div
             className="position-absolute"
             style={{ bottom: "-20%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
           <div
             id="gallery-home"
@@ -465,7 +480,7 @@ const Home = () => {
                 <h4 className="mb-4 fw-semibold">
                   Let’s connect, create memories
                 </h4>
-                <form className="w-100">
+                <form onSubmit={handleSubmit} className="w-100">
                   <div className="d-flex mb-3" style={{ gap: "0.7em" }}>
                     <input
                       type="text"
@@ -508,15 +523,23 @@ const Home = () => {
                     rows="4"
                     onChange={(e) => setQuery(e.target.value)}
                   ></textarea>
-                  <button className="primary-button w-100 rounded-2">
-                    Enquire Now
+                  <button
+                    type="submit"
+                    className="primary-button w-100 rounded-2"
+                  >
+                    {!isSubmit ? "Enquire Now" : "Submitting..."}
                   </button>
+                  {submitMessage && (
+                    <div style={{ color: "green", marginTop: "10px" }}>
+                      <h6 className="text-center">{submitMessage}</h6>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
             <div className="col-12 col-md-6 d-none d-md-flex justify-content-end align-items-center ps-lg-5">
               <img
-                src="/public/contactUs-section.jpg"
+                src="/contactUs-section.jpg"
                 className="img-fluid rounded-2"
               ></img>
             </div>

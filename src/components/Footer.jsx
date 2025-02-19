@@ -23,7 +23,7 @@ const Footer = () => {
                 <div>
                   <Link to="/" className="text-decoration-none">
                     <img
-                      src="/public/twitter.png"
+                      src="/twitter.png"
                       className="social-media-icons"
                     ></img>
                   </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
                 <div>
                   <Link to="/" className="text-decoration-none">
                     <img
-                      src="/public/facebook.jpg"
+                      src="/facebook.jpg"
                       className="social-media-icons"
                     ></img>
                   </Link>
@@ -39,17 +39,14 @@ const Footer = () => {
                 <div>
                   <Link to="/" className="text-decoration-none">
                     <img
-                      src="/public/instagram.png"
+                      src="/instagram.png"
                       className="social-media-icons"
                     ></img>
                   </Link>
                 </div>
                 <div>
                   <Link to="/" className="text-decoration-none">
-                    <img
-                      src="/public/vimeo.png"
-                      className="social-media-icons"
-                    ></img>
+                    <img src="/vimeo.png" className="social-media-icons"></img>
                   </Link>
                 </div>
               </div>

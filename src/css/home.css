@@ -42,8 +42,9 @@ textarea {
   gap: 1.5em;
 }
 
-.gallery-2-height{
+.gallery-2-height {
   height: 1300px;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1500px) {
@@ -107,7 +108,7 @@ textarea {
   #gallery-home h5 {
     font-size: 0.95em;
   }
-  .gallery-2-height{
+  .gallery-2-height {
     height: 550px;
   }
 }

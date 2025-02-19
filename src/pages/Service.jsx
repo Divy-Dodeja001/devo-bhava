@@ -9,7 +9,7 @@ import {
 import "../css/service.css";
 import Gallery1 from "../components/Gallery1";
 import Gallery2 from "../components/Gallery2";
-import ContactForm from "../components/contactForm";
+import Button from "../components/Button";
 
 const Service = () => {
   return (
@@ -22,10 +22,7 @@ const Service = () => {
             className="position-absolute d-lg-none"
             style={{ top: "0%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
           <div className="hero-banner-text w-100">
             <div className="py-5 py-lg-0 container-fluid container-sm">
@@ -42,14 +39,11 @@ const Service = () => {
           <picture>
             <source
               media="(max-width:650px)"
-              srcSet="/public/mobile/hero-services-mobile.jpg"
+              srcSet="/mobile/hero-services-mobile.jpg"
             />
-            <source
-              media="(min-width:651px)"
-              srcSet="/public/hero-services.jpg"
-            />
+            <source media="(min-width:651px)" srcSet="/hero-services.jpg" />
             <img
-              src="/public/hero-services.jpg"
+              src="/hero-services.jpg"
               className="w-100 px-3 px-lg-0"
               alt=""
               srcSet=""
@@ -61,22 +55,19 @@ const Service = () => {
             className="position-absolute d-none d-md-block"
             style={{ top: "10%", left: "0%", zIndex: -1 }}
           >
-            <img src="/public/small-leftVector.svg" className="img-fluid"></img>
+            <img src="/small-leftVector.svg" className="img-fluid"></img>
           </div>
           <div
             className="position-absolute d-lg-none"
             style={{ bottom: "-10%", left: "-10%", zIndex: -1 }}
           >
-            <img src="/public/small-leftVector.svg" className="img-fluid"></img>
+            <img src="/small-leftVector.svg" className="img-fluid"></img>
           </div>
           <div
             className="position-absolute d-none d-md-block"
             style={{ bottom: "-10%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
           <div
             id="weddings-section"
@@ -201,7 +192,7 @@ const Service = () => {
             className="position-absolute d-none d-md-block"
             style={{ top: "60%", left: "0%", zIndex: -1 }}
           >
-            <img src="/public/small-leftVector.svg" className="img-fluid"></img>
+            <img src="/small-leftVector.svg" className="img-fluid"></img>
           </div>
           <div
             id="private-events-section"
@@ -288,20 +279,21 @@ const Service = () => {
                 Share your details with us, and we’ll help bring your vision to
                 life with elegance and perfection.
               </p>
-              <ContactForm title={"Enquire now"} className={"cta-btn"} icon={"si:arrow-right-duotone"} />
-              </div>
+              <Button
+                title={"Enquire now"}
+                className={"cta-btn"}
+                icon={"si:arrow-right-duotone"}
+              />
+            </div>
           </div>
           <picture>
             <source
               media="(max-width:650px)"
-              srcSet="/public/mobile/breaker-services-mobile.jpg"
+              srcSet="/mobile/breaker-services-mobile.jpg"
             />
-            <source
-              media="(min-width:651px)"
-              srcSet="/public/breaker-services.jpg"
-            />
+            <source media="(min-width:651px)" srcSet="/breaker-services.jpg" />
             <img
-              src="/public/breaker-services.jpg"
+              src="/breaker-services.jpg"
               className="w-100"
               alt=""
               srcSet=""

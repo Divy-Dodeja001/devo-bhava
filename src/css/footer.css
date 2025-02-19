@@ -1,5 +1,5 @@
 #footer-section {
-  background-image: url("/public/footervector.svg");
+  background-image: url("/footervector.svg");
   height: 450px;
 }
 
@@ -49,7 +49,7 @@
     font-size: 25px;
   }
   #footer-section {
-    background-image: url("/public/footer-mobile-vector.svg");
+    background-image: url("/footer-mobile-vector.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,4 +78,3 @@
     justify-content: center;
   }
 }
-

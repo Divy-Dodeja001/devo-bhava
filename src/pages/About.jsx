@@ -17,10 +17,7 @@ const About = () => {
             className="position-absolute d-lg-none"
             style={{ top: "0%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
         </div>
         <div
@@ -42,14 +39,14 @@ const About = () => {
           <picture>
             <source
               media="(max-width:650px)"
-              srcSet="/public/mobile/hero-banner-about-us-mobile.jpg"
+              srcSet="/mobile/hero-banner-about-us-mobile.jpg"
             />
             <source
               media="(min-width:651px)"
-              srcSet="/public/hero-banner-about-us.jpg"
+              srcSet="/hero-banner-about-us.jpg"
             />
             <img
-              src="/public/hero-banner-about-us.jpg"
+              src="/hero-banner-about-us.jpg"
               className="w-100 px-3 px-lg-0"
               alt=""
               srcSet=""
@@ -81,13 +78,10 @@ const About = () => {
               </div>
             </div>
             <div className="col-12 col-md-6 ps-lg-4 d-none d-md-flex our-story-image">
-              <img src="/public/our-story.jpg" className="w-75"></img>
+              <img src="/our-story.jpg" className="w-75"></img>
             </div>
             <div className="col-12 col-md-6 ps-lg-4 d-lg-none d-flex our-story-image">
-              <img
-                src="/public/mobile/our-story-mobile.jpg"
-                className="w-100"
-              ></img>
+              <img src="/mobile/our-story-mobile.jpg" className="w-100"></img>
             </div>
           </div>
         </div>
@@ -96,16 +90,13 @@ const About = () => {
             className="position-absolute"
             style={{ top: "-70%", left: "0%", zIndex: -1 }}
           >
-            <img src="/public/small-leftVector.svg" className="img-fluid"></img>
+            <img src="/small-leftVector.svg" className="img-fluid"></img>
           </div>
           <div
             className="position-absolute d-none d-md-block"
             style={{ bottom: "5%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
           <div
             id="founder"
@@ -116,7 +107,7 @@ const About = () => {
               Meet the Founder
             </h3>
             <div className="mb-lg-5 mb-4 d-flex justify-content-center">
-              <img src="/public/founder.png" className="col-6 col-md-3"></img>
+              <img src="/founder.png" className="col-6 col-md-3"></img>
             </div>
             <div>
               <p className="text-center">

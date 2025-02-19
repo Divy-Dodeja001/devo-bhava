@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../css/gallery.css";
-import ContactForm from "../components/contactForm";
+import Button from "../components/Button";
 
 const Gallery = () => {
   return (
@@ -14,10 +14,7 @@ const Gallery = () => {
             className="position-absolute d-lg-none"
             style={{ top: "0%", right: "0%", zIndex: -1 }}
           >
-            <img
-              src="/public/small-rightVector.svg"
-              className="img-fluid"
-            ></img>
+            <img src="/small-rightVector.svg" className="img-fluid"></img>
           </div>
           <div className="hero-banner-text w-100">
             <div className="py-5 py-lg-0 container-fluid container-sm">
@@ -31,14 +28,11 @@ const Gallery = () => {
           <picture>
             <source
               media="(max-width:650px)"
-              srcSet="/public/mobile/hero_gallery-mobile.jpg"
+              srcSet="/mobile/hero_gallery-mobile.jpg"
             />
-            <source
-              media="(min-width:651px)"
-              srcSet="/public/hero-gallery.jpg"
-            />
+            <source media="(min-width:651px)" srcSet="/hero-gallery.jpg" />
             <img
-              src="/public/hero_gallery.jpg"
+              src="/hero_gallery.jpg"
               className="w-100 px-3 px-lg-0"
               alt=""
               srcSet=""
@@ -73,7 +67,7 @@ const Gallery = () => {
             </div>
             <div className="col-12 col-md-6 d-flex justify-content-end align-items-center">
               <img
-                src="/public/aboutUs-section.jpg"
+                src="/aboutUs-section.jpg"
                 className="img-fluid rounded-2"
                 alt=""
                 srcSet=""
@@ -89,8 +83,12 @@ const Gallery = () => {
             decor, planning, logistics, and seamless execution, ensuring every
             detail reflects perfection.
           </p>
-          <ContactForm title={"Enquire now"} className={"cta-btn"} icon={"si:arrow-right-duotone"} />
-          </div>
+          <Button
+            title={"Enquire now"}
+            className={"cta-btn"}
+            icon={"si:arrow-right-duotone"}
+          />
+        </div>
       </div>
       <Footer />
     </>

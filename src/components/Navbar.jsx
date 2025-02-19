@@ -4,7 +4,6 @@ import Button from "./Button";
 import { navItems } from "../data/data";
 import { Icon } from "@iconify/react";
 import "../css/navbar.css";
-import ContactForm from "./contactForm";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,13 +15,13 @@ const Header = () => {
           {/* Logo - Always on the left */}
           <div className="col-4 col-md-2 d-flex justify-content-start align-items-center">
             <Link to={"/"} className="nelphim text-decoration-none logo">
-              <img src="/public/devo-bhava logo.png"></img>
+              <img src="/devo-bhava logo.png"></img>
             </Link>
           </div>
 
           {/* Hamburger Menu for Mobile/Tablet */}
           <div className="col-6 d-flex d-md-none p-0 justify-content-end">
-            <Button link={"/contact-us"} title={"Get in touch"} />
+            <Button title={"Get in touch"} />
           </div>
           <div className="col-2 d-md-none d-flex justify-content-end align-items-center">
             <button
@@ -69,7 +68,7 @@ const Header = () => {
 
           {/* Button - Always on the right */}
           <div className="col-2 p-0 d-none d-md-flex justify-content-end">
-          <ContactForm title={"Get in touch"} />
+            <Button title={"Get in touch"} />
           </div>
         </div>
       </div>
