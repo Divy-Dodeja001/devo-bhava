@@ -4,6 +4,7 @@ import Button from "./Button";
 import { navItems } from "../data/data";
 import { Icon } from "@iconify/react";
 import "../css/navbar.css";
+import ContactForm from "./contactForm";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,7 +69,7 @@ const Header = () => {
 
           {/* Button - Always on the right */}
           <div className="col-2 p-0 d-none d-md-flex justify-content-end">
-            <Button link={"/contact-us"} title={"Get in touch"} />
+          <ContactForm title={"Get in touch"} />
           </div>
         </div>
       </div>

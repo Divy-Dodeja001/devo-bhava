@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import "../css/home.css";
 import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { testimonials } from "../data/data";
+import { gallery2, testimonials } from "../data/data";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,7 +14,8 @@ import { Icon } from "@iconify/react";
 import CountUp from "react-countup";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Gallery1 from "../components/Gallery1";
+import Gallery2 from "../components/Gallery2";
+import ContactForm from "../components/contactForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,12 +64,11 @@ const Home = () => {
                     Crafting bespoke events that combine elegance,
                     sophistication, and meticulous planning.
                   </h5>
-                  <Button
-                    link={"#contact-us-section"}
+                  <ContactForm
                     title={"Enquire now"}
-                    icon={"si:arrow-right-duotone"}
                     className={"cta-btn"}
-                  ></Button>
+                    icon={"si:arrow-right-duotone"}
+                  />
                 </div>
               </div>
               <div className="col-12 col-md-6 pb-lg-5 d-flex justify-content-center align-items-center">
@@ -182,7 +181,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-12 col-md-6 d-flex justify-content-end align-items-center">
-            <picture>
+              <picture>
                 <source
                   media="(max-width:650px)"
                   srcSet="/public/mobile/aboutUs-section-mobile.jpg"
@@ -232,7 +231,10 @@ const Home = () => {
             </div>
             <div className="">
               <picture>
-                <source media="(max-width:650px)" srcSet="/public/mobile/decor-mobile.jpg" />
+                <source
+                  media="(max-width:650px)"
+                  srcSet="/public/mobile/decor-mobile.jpg"
+                />
                 <source media="(min-width:651px)" srcSet="/public/decor.jpg" />
                 <img
                   src="/public/decor.jpg"
@@ -245,7 +247,10 @@ const Home = () => {
             </div>
             <div className="">
               <picture>
-                <source media="(max-width:650px)" srcSet="/public/mobile/venue-mobile.jpg" />
+                <source
+                  media="(max-width:650px)"
+                  srcSet="/public/mobile/venue-mobile.jpg"
+                />
                 <source media="(min-width:651px)" srcSet="/public/venue.jpg" />
                 <img
                   src="/public/venue.jpg"
@@ -290,12 +295,11 @@ const Home = () => {
             detail reflects perfection.
           </p>
           <div className="d-flex justify-content-center">
-            <Button
-              link={"#contact-us-section"}
+            <ContactForm
               title={"Enquire now"}
-              icon={"si:arrow-right-duotone"}
               className={"cta-btn"}
-            ></Button>
+              icon={"si:arrow-right-duotone"}
+            />
           </div>
         </div>
         {/* gallery */}
@@ -327,7 +331,49 @@ const Home = () => {
               Team with all the tools they need to streamline your event
               planning process. Some top artists have gained global
             </h5>
-            <Gallery1 />
+            {/* <Gallery2 /> */}
+            <div className="position-relative pb-5 gallery-2-height">
+              <div className="row px-3">
+                <div className="col-6 p-0 p-1 d-flex justify-content-end">
+                  <Gallery2
+                    src={gallery2[0].src}
+                    direction={gallery2[0].direction}
+                  />
+                </div>
+                <div className="col-6 p-0 p-1 d-flex justify-content-end">
+                  <Gallery2
+                    src={gallery2[1].src}
+                    direction={gallery2[1].direction}
+                  />
+                </div>
+              </div>
+              <div
+                className="position-absolute px-3"
+                style={{ zIndex: 2, bottom: "35%" }}
+              >
+                <Gallery2
+                  src={gallery2[2].src}
+                  direction={gallery2[2].direction}
+                />
+              </div>
+              <div
+                className="row px-3 position-absolute"
+                style={{ zIndex: 3, bottom: "0%" }}
+              >
+                <div className="col-6 p-0 p-1 pe-lg-3 d-flex justify-content-end">
+                  <Gallery2
+                    src={gallery2[3].src}
+                    direction={gallery2[3].direction}
+                  />
+                </div>
+                <div className="col-6 p-0 p-1 ps-lg-3 d-flex justify-content-end">
+                  <Gallery2
+                    src={gallery2[4].src}
+                    direction={gallery2[4].direction}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* testimonials */}

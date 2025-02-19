@@ -23,6 +23,27 @@
   width: 100%;
 }
 
+@media screen and (min-width: 800px) {
+  #hero-section-gallery {
+    .hero-banner-text {
+      position: absolute;
+      color: white;
+      text-align: center;
+      top: 40%;
+    }
+    .hero-banner-text div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero-banner-text p {
+      width: 60%;
+      margin: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .grid-column {
     -ms-flex: 50%;
@@ -32,6 +53,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  #gallery-main-section {
+    #moments-sections h3 {
+      text-align: center;
+    }
+    #moments-sections p {
+      text-align: center;
+    }
+  }
   .grid-column {
     -ms-flex: 50%;
     flex: 50%;

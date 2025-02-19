@@ -31,7 +31,7 @@ const Footer = () => {
                 <div>
                   <Link to="/" className="text-decoration-none">
                     <img
-                      src="/public/facebook.png"
+                      src="/public/facebook.jpg"
                       className="social-media-icons"
                     ></img>
                   </Link>

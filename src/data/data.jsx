@@ -3,7 +3,6 @@ export const navItems = [
   { id: "navItem1", title: "Who we are", link: "/about-us" },
   { id: "navItem1", title: "What we offer", link: "/services" },
   { id: "navItem1", title: "Gallery", link: "/gallery" },
-  { id: "navItem1", title: "Contact", link: "/contact" },
 ];
 
 export const testimonials = [
@@ -110,4 +109,12 @@ export const gallery1 = [
   { id: 7, url: "/public/gallery7.jpg" },
   { id: 8, url: "/public/gallery8.jpg" },
   { id: 9, url: "/public/gallery9.jpg" },
+];
+
+export const gallery2 = [
+  { src: "/public/gallery2_1.jpg", direction: "left" },
+  { src: "/public/gallery2_2.jpg", direction: "right" },
+  { src: "/public/gallery2_3.jpg", direction: "center" },
+  { src: "/public/gallery2_4.jpg", direction: "left" },
+  { src: "/public/gallery2_5.jpg", direction: "right" },
 ];

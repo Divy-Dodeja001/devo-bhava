@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
+  gallery2,
   soireesOfferings,
   weddingOfferings,
   weddingServices,
 } from "../data/data";
 import "../css/service.css";
 import Gallery1 from "../components/Gallery1";
+import Gallery2 from "../components/Gallery2";
+import ContactForm from "../components/contactForm";
 
 const Service = () => {
   return (
@@ -26,9 +29,9 @@ const Service = () => {
           </div>
           <div className="hero-banner-text w-100">
             <div className="py-5 py-lg-0 container-fluid container-sm">
-              <h3 className="nelphim hero-heading">
+              <h1 className="nelphim hero-heading">
                 Every Detail, Thoughtfully Curated
-              </h3>
+              </h1>
               <p>
                 From intimate gatherings to grand celebrations, Devo Bhava
                 offers end-to-end event solutions designed to make your special
@@ -144,11 +147,52 @@ const Service = () => {
                 })}
               </div>
             </div>
-            <div className="pb-lg-5 mb-lg-4">
+            <div className="">
               <h3 className="nelphim mb-lg-5 mb-4 sub-heading text-center">
                 Check our latest gallery
               </h3>
-              <Gallery1 />
+              <div className="position-relative pb-5 gallery-2-height">
+                <div className="row px-3">
+                  <div className="col-6 p-0 p-1 d-flex justify-content-end">
+                    <Gallery2
+                      src={gallery2[0].src}
+                      direction={gallery2[0].direction}
+                    />
+                  </div>
+                  <div className="col-6 p-0 p-1 d-flex justify-content-end">
+                    <Gallery2
+                      src={gallery2[1].src}
+                      direction={gallery2[1].direction}
+                    />
+                  </div>
+                </div>
+                <div
+                  className="position-absolute px-3"
+                  style={{ zIndex: 2, bottom: "35%" }}
+                >
+                  <Gallery2
+                    src={gallery2[2].src}
+                    direction={gallery2[2].direction}
+                  />
+                </div>
+                <div
+                  className="row px-3 position-absolute"
+                  style={{ zIndex: 3, bottom: "0%" }}
+                >
+                  <div className="col-6 p-0 p-1 pe-lg-3 d-flex justify-content-end">
+                    <Gallery2
+                      src={gallery2[3].src}
+                      direction={gallery2[3].direction}
+                    />
+                  </div>
+                  <div className="col-6 p-0 p-1 ps-lg-3 d-flex justify-content-end">
+                    <Gallery2
+                      src={gallery2[4].src}
+                      direction={gallery2[4].direction}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -222,7 +266,7 @@ const Service = () => {
                 ))}
               </div>
             </div>
-            <div className="pb-lg-5 mb-lg-4">
+            <div className="">
               <h3 className="nelphim mb-lg-5 mb-4 sub-heading text-center">
                 Check our latest gallery
               </h3>
@@ -235,16 +279,17 @@ const Service = () => {
           id="breaker-section-service"
           className="position-relative my-lg-5 py-5"
         >
-          <div className="hero-banner-text w-100">
+          <div className="hero-banner-text breaker-banner-text w-100">
             <div className="">
               <h3 className="nelphim sub-heading">
                 Private Soirees and Events
               </h3>
-              <p>
+              <p className="mb-3 mb-lg-4">
                 Share your details with us, and we’ll help bring your vision to
                 life with elegance and perfection.
               </p>
-            </div>
+              <ContactForm title={"Enquire now"} className={"cta-btn"} icon={"si:arrow-right-duotone"} />
+              </div>
           </div>
           <picture>
             <source
@@ -261,7 +306,8 @@ const Service = () => {
               alt=""
               srcSet=""
             />
-          </picture>        </div>
+          </picture>
+        </div>
       </div>
       <Footer />
     </>

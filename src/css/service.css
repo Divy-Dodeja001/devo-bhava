@@ -9,6 +9,7 @@
     }
     .hero-banner-text div {
       display: flex;
+      align-items: center;
       justify-content: center;
       flex-direction: column;
     }
@@ -40,6 +41,24 @@
 }
 
 @media screen and (max-width: 600px) {
+  #breaker-section-service {
+    .breaker-banner-text {
+      position: absolute;
+      color: white;
+      text-align: center;
+      top: 30%;
+    }
+    .hero-banner-text div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .hero-banner-text p {
+      width: 60%;
+      margin: auto;
+    }
+  }
   .wedding-offerings {
     flex-direction: column;
     gap: 1em;

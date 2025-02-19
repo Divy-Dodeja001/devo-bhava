@@ -29,9 +29,9 @@ const About = () => {
         >
           <div className="hero-banner-text w-100">
             <div className="container-fluid container-sm mb-3 mb-lg-0">
-              <h3 className="nelphim hero-heading mb-3 mb-lg-0">
+              <h1 className="nelphim hero-heading mb-3 mb-lg-0">
                 Where Every Moment Becomes a Memory
-              </h3>
+              </h1>
               <p>
                 Discover the story behind DevoBhava, a trusted name in event
                 management, transforming occasions into unforgettable
@@ -84,7 +84,10 @@ const About = () => {
               <img src="/public/our-story.jpg" className="w-75"></img>
             </div>
             <div className="col-12 col-md-6 ps-lg-4 d-lg-none d-flex our-story-image">
-              <img src="/public/mobile/our-story-mobile.jpg" className="w-100"></img>
+              <img
+                src="/public/mobile/our-story-mobile.jpg"
+                className="w-100"
+              ></img>
             </div>
           </div>
         </div>

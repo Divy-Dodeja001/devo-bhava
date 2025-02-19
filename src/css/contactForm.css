@@ -1,0 +1,15 @@
+#contact-form-modal {
+  .btn-close:focus {
+    box-shadow: none;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  input {
+    background-color: #f2f2f2 !important;
+  }
+  .selected-interested-tab {
+    background-color: black;
+    color: white;
+  }
+}
